@@ -20,8 +20,9 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-# My notes
+# My Stuff
 Notes.md
+Instructions.md 
 
 # If satyes removing from staging area 
 git rm --cached Notes.dm
