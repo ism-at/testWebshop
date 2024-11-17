@@ -3,25 +3,25 @@ const prisma = new PrismaClient();
 
 export const GET = async () => {
     try {
-        const products = await prisma.product.findMany();
+        const categories = await prisma.category.findMany();
 
         return new Response(
             JSON.stringify({
-                products           
+                categories
             }),
             {
                 status: 200,
-                headers: {
-                    "Content-Type": "Application-JSON fetching successful"
-                }
+                    headers: {
+                        "Content-Type": "Application-JSON fetching successful"
+                    }
             }
         )
     }
     catch(e){
         return new Response(
             JSON.stringify({
-                message: "Something went wrong",
-                error: e                
+                message: "Something went wrong while fetching categories",
+                error: e
             }),
             {
                 status: 500,
@@ -31,4 +31,5 @@ export const GET = async () => {
             }
         )
     }
+    
 }
